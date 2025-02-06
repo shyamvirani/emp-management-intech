@@ -1,0 +1,13 @@
+<div class="container">
+    <form [formGroup]="form" (ngSubmit)="goToEmployeeList()" class="form-container">
+        <div class="form-group">
+            <label for="department">Enter Department Id</label>
+            <input id="department" formControlName="department" type="number" class="form-control" />
+            <div *ngIf="form.get('department')?.invalid && form.get('department')?.touched" class="error-message">
+                <div *ngIf="form.get('department')?.hasError('required')">This field is required.</div>
+            </div>
+        </div>
+
+        <button type="submit" class="submit-btn" [disabled]="form.invalid">Submit</button>
+    </form>
+</div>

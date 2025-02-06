@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports"
+              xmlns:x="http://www.w3.org/2001/XMLSchema-instance"
+              name="departmentReport"
+              pageWidth="595"
+              pageHeight="842"
+              columnWidth="540"
+              leftMargin="20"
+              rightMargin="20"
+              topMargin="20"
+              bottomMargin="20">
+
+    <field name="departmentName" class="java.lang.String"/>
+    <field name="employeeName" class="java.lang.String"/>
+    <field name="employeePosition" class="java.lang.String"/>
+    <field name="employeeSalary" class="java.lang.Double"/>
+
+    <!-- Department Title (on the first page) -->
+    <title>
+        <band height="80">
+            <staticText>
+                <reportElement x="0" y="0" width="540" height="20"/>
+                <textElement textAlignment="Center" verticalAlignment="Middle"/>
+                <text><![CDATA[Department: $F{departmentName}]]></text>
+            </staticText>
+        </band>
+    </title>
+
+    <!-- Employee Details Table -->
+    <detail>
+        <band height="20">
+            <textField>
+                <reportElement x="0" y="0" width="100" height="20"/>
+                <textElement/>
+                <textFieldExpression><![CDATA[$F{employeeName}]]></textFieldExpression>
+            </textField>
+
+            <textField>
+                <reportElement x="120" y="0" width="150" height="20"/>
+                <textElement/>
+                <textFieldExpression><![CDATA[$F{employeePosition}]]></textFieldExpression>
+            </textField>
+
+            <textField>
+                <reportElement x="280" y="0" width="100" height="20"/>
+                <textElement/>
+                <textFieldExpression><![CDATA[$F{employeeSalary}]]></textFieldExpression>
+            </textField>
+        </band>
+    </detail>
+
+    <!-- Page Break after each department -->
+<!--    <pageBreak>-->
+<!--        <reportElement x="0" y="0" width="540" height="20"/>-->
+<!--    </pageBreak>-->
+</jasperReport>
