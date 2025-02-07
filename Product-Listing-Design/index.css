@@ -1,0 +1,102 @@
+body {
+    background-color: lightgray;
+}
+
+h2,
+h3 {
+    margin: 0px;
+}
+
+.m-b-10 {
+    margin-bottom: 10px;
+}
+
+.card-container {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    padding: 10px;
+}
+
+.card-details {
+    background: white;
+    min-height: 300px;
+    width: 230px;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.p-all-10 {
+    padding: 10px;
+}
+
+.img-details {
+    height: 150px;
+    width: 210px;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.desc-details {
+    max-width: 268px;
+    font-size: 13px;
+    color: gray;
+}
+
+.score {
+    display: block;
+    font-size: 16px;
+    position: relative;
+    overflow: hidden;
+}
+
+.score-wrap {
+    display: inline-block;
+    position: relative;
+    height: 19px;
+}
+
+.score .stars-active {
+    color: #EEBD01;
+    position: relative;
+    z-index: 10;
+    display: inline-block;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.score .stars-inactive {
+    color: grey;
+    position: absolute;
+    top: 0;
+    left: 0;
+    -webkit-text-stroke: initial;
+}
+
+.buy-now {
+    border-top: 1px solid #b3aeae;
+    color: white;
+    line-height: 30px;
+    font-size: 14px;
+    text-align: center;
+    border-radius: 4px;
+}
+
+.red {
+    background: red;
+}
+
+.purple {
+    background-color: purple;
+}
+
+.orange {
+    background-color: orange;
+}
+
+.black {
+    background-color: black;
+}
+
